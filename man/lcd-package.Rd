@@ -88,9 +88,8 @@ and random sample generation from chain graphs.
   Stanford University, USA
 }
 \references{
-  Lauritzen, S. L. (2002). gRaphical Models in R.
-  \emph{R News}, 3(2)39.
-
+%   Lauritzen, S. L. (2002). gRaphical Models in R.
+%   \emph{R News}, 3(2)39.
   Ma, Z., Xie, X. and Geng, Z. (2008). Structural learning of chain
   graphs via decomposition. \emph{J. Mach. Learn. Res.,}
   \bold{9}, 2847-2880.

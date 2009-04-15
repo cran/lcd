@@ -44,9 +44,9 @@ double cond_ind_test( const std::vector<std::pair<std::vector<T>, int> >& M,
 
   // build indices
   
-  std::map<const T, int> ii_i;  // i-th -> int
-  std::map<const T, int> ii_j;  // j-th -> int
-  std::map<const std::vector<T>, int> ii_k; // K-th -> int
+  std::map<T, int> ii_i;  // i-th -> int
+  std::map<T, int> ii_j;  // j-th -> int
+  std::map<std::vector<T>, int> ii_k; // K-th -> int
   std::vector<std::vector<int> > ii(m);     // index of each measurement
 
   std::vector<int> max_ijk(3,0); // number of different values
@@ -79,8 +79,8 @@ double cond_ind_test( const std::vector<std::pair<std::vector<T>, int> >& M,
 
   // count appearance
 
-  std::map<const std::vector<int>, int> f_ik; // N(i,*,k)
-  std::map<const std::vector<int>, int> f_jk; // N(*,j,k)
+  std::map<std::vector<int>, int> f_ik; // N(i,*,k)
+  std::map<std::vector<int>, int> f_jk; // N(*,j,k)
   std::vector<int> f_k(max_ijk[2]);           // N(*,*,k)
 
   for( int l=0; l<m; ++l )
