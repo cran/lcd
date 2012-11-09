@@ -9,7 +9,7 @@
 {
     if(any(skeleton(amat) != amat))
         stop("You should input an undirected graph!")
-    cliq <- ggm::cliques
+    cliq <- .lcd.cliques
     cl <- cliq(amat)
     ele <- sapply(cl, function(x) paste(x, collapse=":"))
     as.formula(paste("Freq ~", paste(ele, collapse="+")))

@@ -30,7 +30,8 @@ function(amat)
     chainsize<-c()
     if(output == TRUE){
         for(k in 1:length(b)){
-            vertorder <- c(vertorder, which(cc$membership == chainorder[k]-1))
+            ## vertorder <- c(vertorder, which(cc$membership == chainorder[k]-1))
+            vertorder <- c(vertorder, which(cc$membership == chainorder[k]))
             chainsize <- c(chainsize, cc$csize[chainorder[k]])
         }
     }

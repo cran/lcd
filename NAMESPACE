@@ -1,6 +1,6 @@
 useDynLib(lcd)
 importFrom(MASS, mvrnorm, loglm)
-importFrom(ggm, transClos, isAcyclic, topOrder, pa, cliques)
+importFrom(ggm, transClos, isAcyclic, topOrder, pa)
 exportPattern("^[[:alpha:]]+")
 exportClasses(sep.pair, sep.tree, freq.tb)
 exportMethods(show, all.equal)

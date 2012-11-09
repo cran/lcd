@@ -1,7 +1,7 @@
 `get.multinom.dist` <- function(amat, n.state, alpha = 1, beta = 1)
   ## n.state is a vector of number of states for each r.v.
 {
-    cliq <- ggm::cliques
+    cliq <- .lcd.cliques
     fcheck <- is.chaingraph(amat)
     if(!fcheck$result)
         stop("The input should be a chain graph!")

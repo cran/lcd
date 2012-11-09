@@ -11,8 +11,13 @@
         V.idx <- match(colnames(temp$Vtable), vset)
         if(ncol(temp$cond.dist) > 1){
             B.idx <- match(colnames(temp$Btable), vset)
-            config <- apply(as.matrix(data[,B.idx]), 1, function(x)
-                            which(apply(temp$Btable, 1, function(y) identical(x,y))))
+            if (length(B.idx) > 1) {
+              config <- apply(as.matrix(data[,B.idx]), 1, function(x)
+                              which(apply(temp$Btable, 1, function(y) identical(x,y))))
+            } else {
+              config <- apply(as.matrix(data[,B.idx]), 1, function(x)
+                              which(apply(temp$Btable, 1, function(y) y==x)))
+            }
             row <- sapply(config, function(x)
                           sample(nrow(temp$Vtable), 1, prob = temp$cond.dist[,x]))
             data[,V.idx] <- temp$Vtable[row,]

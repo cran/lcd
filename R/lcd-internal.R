@@ -554,3 +554,12 @@ function(c, vset)
     }
     phi
 }
+
+
+.lcd.cliques <- function(amat)
+  {
+    vertices <- rownames(amat)
+    amat.igraph <- graph.adjacency(amat, mode = "max")
+    cliq.list <- cliques(amat.igraph)
+    lapply(cliq.list, function(x) vertices[x])
+  }

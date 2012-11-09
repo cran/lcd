@@ -50,7 +50,8 @@ setClass("sep.tree",
             l.vset <- r.vset <- c()
             l <- r <- c()
             for(j in 1:(n.sep+1)){
-                if(cc$membership[j]==0){
+                ## if(cc$membership[j]==0){
+              if(cc$membership[j]==1){
                     l.vset <- c(l.vset, object@cliques[[j]]$vset)
                     l <- c(l, j)
                 } else {

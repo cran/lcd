@@ -79,7 +79,7 @@ and random sample generation from chain graphs.
 \author{
   Zongming Ma\cr
   Department of Statistics\cr
-  Stanford University, USA\cr
+  The Wharton School, University of Pennsylvania, USA\cr
   \email{zongming.ma@gmail.com}
   
   
